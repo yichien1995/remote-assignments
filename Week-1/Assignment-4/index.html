@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Google for Developers - from AI and Cloud to Mobile and Web</title>
+  </head>
+  <body>
+    <header id="nav-header">
+      <img
+        id="nav-logo"
+        src="./images/lockup-new.svg"
+        alt="google for developers-logo"
+      />
+      <nav>
+        <ul>
+          <li><a class="a-nav" href="">Products</a></li>
+          <li><a class="a-nav" href="">Solutions</a></li>
+          <li><a class="a-nav" href="">Events</a></li>
+          <li><a class="a-nav" href="">Learn</a></li>
+          <li><a class="a-nav" href="">Community</a></li>
+          <li><a class="a-nav" href="">Developer Profile</a></li>
+          <li><a class="a-nav" href="">Blog</a></li>
+        </ul>
+      </nav>
+      <input id="search" type="text" placeholder="search" />
+      <select name="select">
+        <option value="English">English</option>
+        <option value="Deutsch">Deutsch</option>
+        <option value="Francais">Francais</option>
+        <option value="Indonesia">Indonesia</option>
+        <option value="中文-繁體">中文-繁體</option>
+        <option value="中文-简体">中文-简体</option>
+        <option value="日本語">日本語</option>
+      </select>
+      <div id="sign-in">
+        <button class="blue"><a>Sign in</a></button>
+      </div>
+    </header>
+    <main>
+      <header id="main-header">
+        <span>
+          Explore over 1,000 chapters across 140 countries and meet like-minded
+          developers like you.<a id="main-header-link" href=""
+            >Find a Google Developer Group near you.</a
+          >
+        </span>
+      </header>
+      <section id="main-top-section">
+        <div id="main-top">
+          <h1>
+            Build smarter,<br />
+            ship faster
+          </h1>
+          <p>
+            Unlock creativity and simplify your workflow with open, integrated
+            solutions.
+          </p>
+        </div>
+        <figure id="gemini">
+          <img
+            id="gemini-photo"
+            src="./images/gemini-spotlight.png"
+            alt="google-ai-studio-gemini"
+          />
+          <figcaption>
+            <a
+              href="https://ai.google.dev/?utm_source=gfd&utm_medium=referral&utm_campaign=home_hero&utm_content"
+              >Meet Google AI Studio, the fastest way to build with Gemini</a
+            >
+          </figcaption>
+        </figure>
+      </section>
+      <!-- <section id="filter">
+        <h3>Select interests to filter</h3>
+      </section> -->
+      <section id="resource-section">
+        <h2>Start building today</h2>
+        <div id="resource-container">
+          <div class="resource-block">
+            <a href="">
+              <div class="resource">
+                <img
+                  class="resource-logo"
+                  src="./images/logo/android-logo.png"
+                  alt="android-logo"
+                />
+                <h4>Android</h4>
+                <p>
+                  Modern tools to help you build experience that pople love
+                  across every Android device.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="resource-block">
+            <a href="">
+              <div class="resource">
+                <img
+                  class="resource-logo"
+                  src="./images/logo/google_cloud_64dp.png"
+                  alt="google-cloud-logo"
+                />
+                <h4>Google Cloud</h4>
+                <p>
+                  Build app faster, make smarter business decisions, and connect
+                  poeple everywhere.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="resource-block">
+            <a href="">
+              <div class="resource">
+                <img
+                  class="resource-logo"
+                  src="./images/logo/ai-studio-icon.png"
+                  alt="google-ai-studio-logo"
+                />
+                <h4>Google AI Studio</h4>
+                <p>
+                  Build generative AI applications quickly with Gemini in Google
+                  AI Studio.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="resource-block">
+            <a href="">
+              <div class="resource">
+                <img
+                  class="resource-logo"
+                  src="./images/logo/chromeos-logo.svg"
+                  alt="chrome-logo"
+                />
+                <h4>Chrome</h4>
+                <p>
+                  Modern tools and features that help you build high-quality web
+                  experiences
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="resource-block">
+            <a href="">
+              <div class="resource">
+                <img
+                  class="resource-logo"
+                  src="./images/logo/play_prism_64dp.png"
+                  alt="google-play-logo"
+                />
+                <h4>Google Play</h4>
+                <p>
+                  Grow your business, improve app quality, engage your audience,
+                  and earn revenue.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="resource-block">
+            <a href="">
+              <div class="resource">
+                <img
+                  class="resource-logo"
+                  src="./images/logo/firebase_64dp.png"
+                  alt="firebase-logo"
+                />
+                <h4>Firebase</h4>
+                <p>
+                  An app development platform that helps you build and grow apps
+                  and games users love.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="resource-block">
+            <a href="">
+              <div class="resource">
+                <img
+                  class="resource-logo"
+                  src="./images/logo/keras.png"
+                  alt="keras-logo"
+                />
+                <h4>keras</h4>
+                <p>
+                  Seamless deep learning across TensorFlow,JAX, and PyTorch.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="resource-block">
+            <a href="">
+              <div class="resource">
+                <img
+                  class="resource-logo"
+                  src="./images/logo/tensorflow-logo-196.png"
+                  alt="tensorflow-logo"
+                />
+                <h4>TensorFlow</h4>
+                <p>
+                  An end-to-end platform that makes it easy to build and deploy
+                  ML models in any environment.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="resource-block">
+            <a href="">
+              <div class="resource">
+                <img
+                  class="resource-logo"
+                  src="./images/logo/flutter_64dp.png"
+                  alt="flutter-logo"
+                />
+                <h4>Flutter</h4>
+                <p>
+                  Build, test, and deploy beautiful web, mobile, desktop and
+                  embedded apps from one codebase.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="resource-block">
+            <a href="">
+              <div class="resource">
+                <img
+                  class="resource-logo"
+                  src="./images/logo/google-ads.svg"
+                  alt="google-ads-logo"
+                />
+                <h4>Google Ads</h4>
+                <p>
+                  Promote your website, products, and app to the right users
+                  with Google Ads.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="resource-block">
+            <a href="">
+              <div class="resource">
+                <img
+                  class="resource-logo"
+                  id="kaggle-logo"
+                  src="./images/logo/kaggle.svg"
+                  alt="kaggle-logo"
+                />
+                <h4>Kaggle</h4>
+                <p>
+                  A platform to share machine learning data sets, explore and
+                  build models, and compete in competitions.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="resource-block">
+            <a href="">
+              <div class="resource">
+                <img
+                  class="resource-logo"
+                  src="./images/logo/angular_gradient.png"
+                  alt="angular-logo"
+                />
+                <h4>Angular</h4>
+                <p>The web development framework for building the future.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <button class="blue"><a href="">View all developer products</a></button>
+      </section>
+      <section id="application">
+        <h2>What are you developing for?</h2>
+        <h3>
+          Select your development focus to find helpful solutions and resources
+        </h3>
+        <div id="application-container">
+          <div class="application-block">
+            <div class="application-block-left">
+              <a href=""><h4>Mobile</h4></a>
+              <p>Develop for a range of audiences and form factors</p>
+              <button class="blue"><a href="">Get started</a></button>
+            </div>
+            <a href=""
+              ><img
+                class="application-logo"
+                src="./images/application-icon/ecosystem-mobile.svg"
+                alt="ecosystem-mobile-icon"
+            /></a>
+          </div>
+          <div class="application-block">
+            <div class="application-block-left">
+              <a href=""><h4>Web</h4></a>
+              <p>Create fast, secure sites and apps for open web.</p>
+              <button class="blue"><a href="">Get started</a></button>
+            </div>
+            <a href=""
+              ><img
+                class="application-logo"
+                src="./images/application-icon/ecosystem-web.svg"
+                alt="ecosystem-web-icon"
+            /></a>
+          </div>
+          <div class="application-block">
+            <div class="application-block-left">
+              <a href=""><h4>AI</h4></a>
+              <p>Bring the power of machine learning to apps and workflows.</p>
+              <button class="blue"><a href="">Get started</a></button>
+            </div>
+            <a href=""
+              ><img
+                class="application-logo"
+                src="./images/application-icon/ecosystem-ai.svg"
+                alt="ecosystem-ai-icon"
+            /></a>
+          </div>
+          <div class="application-block">
+            <div class="application-block-left">
+              <a href=""><h4>Cloud</h4></a>
+              <p>Simplify and scale end-to-end development.</p>
+              <button class="blue"><a href="">Get started</a></button>
+            </div>
+            <a href=""
+              ><img
+                class="application-logo"
+                src="./images/application-icon/ecosystem-cloud.svg"
+                alt="ecosystem-cloud-icon"
+            /></a>
+          </div>
+        </div>
+      </section>
+      <article>
+        <h3>Trending news</h3>
+        <section id="news-container">
+          <div class="news-block">
+            <img
+              src="./images/news-pic/newscard-chrome-cookies.webp"
+              alt="third-party cookie news"
+            />
+            <div class="news-block-bottom">
+              <h4>Third-party cookie deprecation coming</h4>
+              <p>Deprecation begins January 2024. Test your site today.</p>
+              <button class="blue"><a>Learn more</a></button>
+            </div>
+          </div>
+          <div class="news-block">
+            <img src="./images/news-pic/devfest-2023.webp" alt="2023 devfest" />
+            <div class="news-block-bottom">
+              <h4>Join DevFest 2023</h4>
+              <p>
+                Explore hands-on learning and technical talks. Find a DevFest
+                near you.
+              </p>
+              <button class="blue"><a>Learn more</a></button>
+            </div>
+          </div>
+          <div class="news-block">
+            <img
+              src="./images/news-pic/content-driven-apps_480.png"
+              alt="content-driven web applications"
+            />
+            <div class="news-block-bottom">
+              <h4>Building content-driven web applications</h4>
+              <p>
+                Explore our curated guides to create ecommerce, newspaper, or
+                blog web applicstions.
+              </p>
+              <button class="blue"><a>Learn more</a></button>
+            </div>
+          </div>
+        </section>
+      </article>
+      <aside>
+        <div id="android-studio-container" class="aside-container">
+          <a class="aside-img-a" href=""
+            ><img
+              class="aside-img"
+              src="./images/aside-img/android-studio-hedgehog_856.png"
+              alt="android-studio"
+          /></a>
+          <div class="aside-content">
+            <span>WHAT'S NEW IN ANDROID</span>
+            <a class="aside-heading-a" href=""
+              ><h3>Android Studio Hedgehog is now stable</h3></a
+            >
+            <p>
+              With features to improve app performance, battery life, easier
+              upgrading, and faster Jetpack Compose development.
+            </p>
+            <button class="blue"><a>Download now</a></button>
+          </div>
+        </div>
+        <div class="aside-container">
+          <a class="aside-img-a" href=""
+            ><img
+              class="aside-img"
+              src="./images/aside-img/explore-your-interests_856.jpg"
+              alt="explore-your-interests"
+          /></a>
+          <div class="aside-content">
+            <img
+              src="./images/aside-img/explore-interests-eyebrow.svg"
+              alt="icon"
+            />
+            <a class="aside-heading-a" href=""><h4>Find an event</h4></a>
+            <p>
+              Grow your knowledge through online and in-person developer events.
+            </p>
+            <button class="white"><a>View events</a></button>
+          </div>
+        </div>
+        <div class="aside-container reverse">
+          <a class="aside-img-a" href=""
+            ><img
+              class="aside-img"
+              src="./images/aside-img/technical-skills_856.jpg"
+              alt="learning through laptop"
+          /></a>
+          <div class="aside-content">
+            <img
+              src="./images/aside-img/technical-skills-eyebrow.svg"
+              alt="icon"
+            />
+            <a class="aside-heading-a" href=""
+              ><h4>Improve technical skills</h4></a
+            >
+            <p>
+              Keep up with Google technology. Sharpen skills and master new
+              ones.
+            </p>
+            <button class="white"><a>Start learning</a></button>
+          </div>
+        </div>
+        <div class="aside-container">
+          <a class="aside-img-a" href=""
+            ><img
+              class="aside-img"
+              src="./images/aside-img/find-community_856.png"
+              alt="developer community"
+          /></a>
+          <div class="aside-content">
+            <img
+              src="./images/aside-img/find-community-eyebrow.svg"
+              alt="icon"
+            />
+            <a class="aside-heading-a" href=""><h4>Join a community</h4></a>
+            <p>
+              Meet a diverse network, no matter where you are on your developer
+              journey.
+            </p>
+            <button class="white"><a>Explore communities</a></button>
+          </div>
+        </div>
+      </aside>
+      <section id="follow-section">
+        <h2>Follow Google for Developers</h2>
+        <div id="follow-container">
+          <div class="follow-block">
+            <img src="./images/follow-icon/yt.svg" alt="youtube-icon" />
+            <h4>Youtube</h4>
+            <p>
+              Subscribe to join a community of creative developers and learn the
+              latest in Google technology.
+            </p>
+            <button class="white"><a>Learn more</a></button>
+          </div>
+          <div class="follow-block">
+            <img src="./images/follow-icon/ig.webp" alt="ig-icon" />
+            <h4>Instagram</h4>
+            <p>
+              Follow and discover developer resources, community events, and
+              inspirational stories.
+            </p>
+            <button class="white"><a>Learn more</a></button>
+          </div>
+          <div class="follow-block">
+            <img src="./images/follow-icon/li_72.png" alt="linkedIn-icon" />
+            <h4>LinkedIn</h4>
+            <p>
+              Join a community of creative developers and learn how to use the
+              latest in technology.
+            </p>
+            <button class="white"><a>Learn more</a></button>
+          </div>
+          <div class="follow-block">
+            <img src="./images/follow-icon/x.svg" alt="X-icon" />
+            <h4>X</h4>
+            <p>
+              Join the conversation to discover the latest developer tools,
+              resources, events, and announcements.
+            </p>
+            <button class="white"><a>Learn more</a></button>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <footer>
+        <div id="links-container">
+          <div class="links-block">
+            <h5>Connect</h5>
+            <ul>
+              <li><a href="">Blog</a></li>
+              <li><a href="">Instagram</a></li>
+              <li><a href="">LinkedIn</a></li>
+              <li><a href="">Twitter</a></li>
+              <li><a href="">YouTube</a></li>
+            </ul>
+          </div>
+          <div class="links-block">
+            <h5>Programs</h5>
+            <ul>
+              <li><a href="">Women Techmakers</a></li>
+              <li><a href="">Google Developer Groups</a></li>
+              <li><a href="">Google Developer Experts</a></li>
+              <li><a href="">Accelerators</a></li>
+              <li><a href="">Google Developer Student Clubs</a></li>
+            </ul>
+          </div>
+          <div class="links-block">
+            <h5>Developer consoles</h5>
+            <ul>
+              <li><a href="">Google API Console</a></li>
+              <li><a href="">Google Cloud Platform Console</a></li>
+              <li><a href="">Google Play Console</a></li>
+              <li><a href="">Firebase Console</a></li>
+              <li><a href="">Actions on Google Console</a></li>
+              <li><a href="">Cast SDK Developer Console</a></li>
+              <li><a href="">Chrome Web Store Dashboard</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <nav id="footer-nav">
+          <img
+            id="footer-logo"
+            src="./images/lockup-new.svg"
+            alt="google for developers-logo"
+          />
+          <ul>
+            <li><a href="">Android</a></li>
+            <li><a href="">Chrome</a></li>
+            <li><a href="">Firebase</a></li>
+            <li><a href="">Google Cloud Platform</a></li>
+            <li><a href="">All products</a></li>
+          </ul>
+        </nav>
+        <hr />
+        <footer id="footer-bottom">
+          <span><a href="">Terms</a> | <a href="">Privacy</a></span>
+          <div id="footer-bottom-left">
+            <span>Sign up for the Google for Developers newsletter</span>
+            <button class="blue"><a>Subscribe</a></button>
+          </div>
+          <select name="select">
+            <option value="English">English</option>
+            <option value="Deutsch">Deutsch</option>
+            <option value="Francais">Francais</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="中文-繁體">中文-繁體</option>
+            <option value="中文-简体">中文-简体</option>
+            <option value="日本語">日本語</option>
+          </select>
+        </footer>
+      </footer>
+    </main>
+  </body>
+</html>
