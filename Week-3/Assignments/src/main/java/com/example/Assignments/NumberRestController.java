@@ -16,6 +16,7 @@ public class NumberRestController {
 
         int number;
         int result;
+
         try {
             number = Integer.parseInt(input);
             if (number < 0) {
@@ -27,5 +28,4 @@ public class NumberRestController {
             return "Wrong Parameter";
         }
     }
-
 }

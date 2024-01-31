@@ -27,10 +27,9 @@ public class UserController {
     }
 
     @RequestMapping("/trackName")
-    public String setCookie(@RequestParam("username") String username,HttpServletResponse response) {
+    public String setCookie(@RequestParam("username") String username, HttpServletResponse response) {
         Cookie cookie = new Cookie("username", username);
         response.addCookie(cookie);
-
         return "redirect:/myName";
     }
 }

@@ -8,15 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 public class AssignmentsApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(AssignmentsApplication.class, args);
+    }
 
-	public static void main(String[] args) {
-
-		SpringApplication.run(AssignmentsApplication.class, args);
-	}
-
-	@GetMapping
-	public String hello() {
-		return "Hello, my server";
-	}
-
+    @GetMapping
+    public String hello() {
+        return "Hello, my server";
+    }
 }
