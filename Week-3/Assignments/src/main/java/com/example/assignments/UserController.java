@@ -1,4 +1,4 @@
-package com.example.Assignments;
+package com.example.assignments;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
