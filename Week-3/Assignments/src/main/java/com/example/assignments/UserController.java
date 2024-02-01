@@ -12,24 +12,24 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class UserController {
-    @GetMapping("/myName")
-    public String showUserNamePage(Model model, @CookieValue(value = "username", required = false) String username) {
-        if (username == null || username.isEmpty()) {
-            return "redirect:/trackName";
-        }
-        model.addAttribute("username", username);
-        return "userNamePage";
-    }
+	@GetMapping("/myName")
+	public String showUserNamePage(Model model, @CookieValue(value = "username", required = false) String username) {
+		if (username == null || username.isEmpty()) {
+			return "redirect:/trackName";
+		}
+		model.addAttribute("username", username);
+		return "userNamePage";
+	}
 
-    @GetMapping("/trackName")
-    public String showUserNameFormPage() {
-        return "userNameForm";
-    }
+	@GetMapping("/trackName")
+	public String showUserNameFormPage() {
+		return "userNameForm";
+	}
 
-    @RequestMapping("/trackName")
-    public String setCookie(@RequestParam("username") String username, HttpServletResponse response) {
-        Cookie cookie = new Cookie("username", username);
-        response.addCookie(cookie);
-        return "redirect:/myName";
-    }
+	@RequestMapping("/trackName")
+	public String setCookie(@RequestParam("username") String username, HttpServletResponse response) {
+		Cookie cookie = new Cookie("username", username);
+		response.addCookie(cookie);
+		return "redirect:/myName";
+	}
 }
