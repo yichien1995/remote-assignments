@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home Page</title>
+    </head>
+    <body>
+        <h1>歡迎來到我的網站</h1>
+        <div th:switch="${message}">
+            <div th:case="'Success'" class="alert alert-success" th:style ="'color:green'">
+               <p><strong>註冊成功!</strong>請重新登入</p>
+            </div>
+            <div th:case="'Failed'" class="alert alert-danger" th:style ="'color:red'">
+                <p><strong>註冊失敗!</strong>該信箱已註冊過</p>
+            </div>
+            <div th:case="'WrongPassword'" class="alert alert-wrongPassword" th:style ="'color:red'">
+                <p><strong>登入失敗!</strong>輸入密碼錯誤</p>
+            </div>
+            <div th:case="'FindNoMembership'" class="alert alert-findNoMembership" th:style ="'color:red'">
+                <p><strong>登入失敗!</strong>查無會員，請先註冊</p>
+            </div>
+        </div>
+        <h2>註冊</h2>
+        <form action="/signup" method="post">
+            <label for="signUpEmail">信箱：</label>
+            <input id="signUpEmail" type="email" name="email" required />
+            <br />
+            <label for="signUpPassword">密碼：</label>
+            <input id="signUpPassword" type="password" name="password" required />
+            <br />
+            <button>註冊</button>
+        </form>
+        <h2>登入</h2>
+        <form action="/signin" method="post">
+            <label for="signInEmail">信箱：</label>
+            <input id="signInEmail" type="email" name="email" required />
+            <br />
+            <label for="signInPassword">密碼：</label>
+            <input id="signInPassword" name="password" required />
+            <br />
+            <button>登入</button>
+        </form>
+
+    </body>
+</html>
