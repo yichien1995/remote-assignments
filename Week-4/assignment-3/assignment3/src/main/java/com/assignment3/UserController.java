@@ -22,28 +22,27 @@ public class UserController {
 	}
 
 	@PostMapping("/signup")
-	public String signUp(@RequestParam String email, @RequestParam String password,RedirectAttributes redirectAttributes){
-		if(storeInformationRepository.findByStoreEmail(email) != null){
+	public String signUp(@RequestParam String email, @RequestParam String password, RedirectAttributes redirectAttributes) {
+		if (storeInformationRepository.findByStoreEmail(email) != null) {
 			redirectAttributes.addFlashAttribute("message", "Failed");
 			redirectAttributes.addFlashAttribute("alertClass", "alert-danger");
-			return "redirect:/";
 		} else {
 			StoreInformation n = new StoreInformation(email, password);
 			storeInformationRepository.save(n);
 			redirectAttributes.addFlashAttribute("message", "Success");
 			redirectAttributes.addFlashAttribute("alertClass", "alert-success");
-			return "redirect:/";
 		}
+		return "redirect:/";
 	}
 
 	@PostMapping("/signin")
-	public String signIn(@RequestParam String email, @RequestParam String password,RedirectAttributes redirectAttributes){
+	public String signIn(@RequestParam String email, @RequestParam String password, RedirectAttributes redirectAttributes) {
 		StoreInformation checkMember = storeInformationRepository.findByStoreEmail(email);
-		if(checkMember == null) {
+		if (checkMember == null) {
 			redirectAttributes.addFlashAttribute("message", "FindNoMembership");
 			redirectAttributes.addFlashAttribute("alertClass", "alert-findNoMembership");
 			return "redirect:/";
-		} else if (!checkMember.getStorePassword().equals(password)){
+		} else if (!checkMember.getStorePassword().equals(password)) {
 			redirectAttributes.addFlashAttribute("message", "WrongPassword");
 			redirectAttributes.addFlashAttribute("alertClass", "alert-wrongPassword");
 			return "redirect:/";
