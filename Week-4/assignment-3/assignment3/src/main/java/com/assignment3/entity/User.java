@@ -6,17 +6,17 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class StoreInformation {
+public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String email;
 	private String password;
 
-	public StoreInformation() {
+	public User() {
 	}
 
-	public StoreInformation(String email, String password) {
+	public User(String email, String password) {
 		this.email = email;
 		this.password = password;
 	}

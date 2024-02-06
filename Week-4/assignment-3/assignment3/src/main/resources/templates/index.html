@@ -6,11 +6,8 @@
         <title>Home Page</title>
     </head>
     <body>
-        <h1>歡迎來到我的網站</h1>
+        <h1>會員註冊/登入</h1>
         <div th:switch="${message}">
-            <div th:case="'Success'" class="alert alert-success" th:style ="'color:green'">
-               <p><strong>註冊成功!</strong>請重新登入</p>
-            </div>
             <div th:case="'Failed'" class="alert alert-danger" th:style ="'color:red'">
                 <p><strong>註冊失敗!</strong>該信箱已註冊過</p>
             </div>
@@ -37,7 +34,7 @@
             <input id="signInEmail" type="email" name="email" required />
             <br />
             <label for="signInPassword">密碼：</label>
-            <input id="signInPassword" name="password" required />
+            <input id="signInPassword" type="password" name="password" required />
             <br />
             <button>登入</button>
         </form>

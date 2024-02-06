@@ -1,8 +1,8 @@
 package com.assignment3;
 
 
-import com.assignment3.entity.StoreInformation;
-import com.assignment3.repository.StoreInformationRepository;
+import com.assignment3.entity.User;
+import com.assignment3.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +14,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 public class UserController {
 
 	@Autowired
-	private StoreInformationRepository storeInformationRepository;
+	private UserRepository storeInformationRepository;
 
 	@GetMapping("/")
 	public String home() {
@@ -26,18 +26,18 @@ public class UserController {
 		if (storeInformationRepository.findByEmail(email) != null) {
 			redirectAttributes.addFlashAttribute("message", "Failed");
 			redirectAttributes.addFlashAttribute("alertClass", "alert-danger");
+			return "redirect:/";
 		} else {
-			StoreInformation n = new StoreInformation(email, password);
+			User n = new User(email, password);
 			storeInformationRepository.save(n);
-			redirectAttributes.addFlashAttribute("message", "Success");
-			redirectAttributes.addFlashAttribute("alertClass", "alert-success");
+			return "member";
 		}
-		return "redirect:/";
+
 	}
 
 	@PostMapping("/signin")
 	public String signIn(@RequestParam String email, @RequestParam String password, RedirectAttributes redirectAttributes) {
-		StoreInformation checkMember = storeInformationRepository.findByEmail(email);
+		User checkMember = storeInformationRepository.findByEmail(email);
 		if (checkMember == null) {
 			redirectAttributes.addFlashAttribute("message", "FindNoMembership");
 			redirectAttributes.addFlashAttribute("alertClass", "alert-findNoMembership");
