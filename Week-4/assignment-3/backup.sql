@@ -23,10 +23,10 @@ DROP TABLE IF EXISTS `store_information`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `store_information` (
-  `storeid` int NOT NULL,
-  `store_email` varchar(255) DEFAULT NULL,
-  `store_password` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`storeid`)
+  `id` int NOT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -39,6 +39,28 @@ LOCK TABLES `store_information` WRITE;
 INSERT INTO `store_information` VALUES (1,'123@gamil.com','123'),(2,'456@gamil.com','456'),(3,'789@gmail.com','789'),(4,'abc@gmail.com','abc'),(5,'def@gmail.com','def'),(6,'ghi@gmail.com','ghi'),(7,'jkl@gmail.com','jkl'),(8,'mno@gmail.com','mno'),(9,'pqr@gmail.com','pqr'),(10,'stu@gmail.com','stu');
 /*!40000 ALTER TABLE `store_information` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `store_information_seq`
+--
+
+DROP TABLE IF EXISTS `store_information_seq`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `store_information_seq` (
+  `next_val` bigint DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `store_information_seq`
+--
+
+LOCK TABLES `store_information_seq` WRITE;
+/*!40000 ALTER TABLE `store_information_seq` DISABLE KEYS */;
+INSERT INTO `store_information_seq` VALUES (101);
+/*!40000 ALTER TABLE `store_information_seq` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -49,4 +71,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-02-04 20:40:13
+-- Dump completed on 2024-02-06 16:53:25

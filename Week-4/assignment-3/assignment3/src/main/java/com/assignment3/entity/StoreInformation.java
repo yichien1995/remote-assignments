@@ -7,42 +7,42 @@ import jakarta.persistence.Id;
 
 @Entity
 public class StoreInformation {
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer storeID;
-	private String storeEmail;
-	private String storePassword;
+	private Integer id;
+	private String email;
+	private String password;
 
 	public StoreInformation() {
 	}
 
-	public StoreInformation(String storeEmail, String storePassword) {
-		this.storeEmail = storeEmail;
-		this.storePassword = storePassword;
+	public StoreInformation(String email, String password) {
+		this.email = email;
+		this.password = password;
 	}
 
-	public Integer getStoreID() {
-		return storeID;
+	public Integer getId() {
+		return id;
 	}
 
-	public void setStoreID(Integer storeID) {
-		this.storeID = storeID;
+	public String getEmail() {
+		return email;
 	}
 
-	public String getStoreEmail() {
-		return storeEmail;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setStoreEmail(String storeEmail) {
-		this.storeEmail = storeEmail;
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
-	public String getStorePassword() {
-		return storePassword;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public void setStorePassword(String storePassword) {
-		this.storePassword = storePassword;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 }

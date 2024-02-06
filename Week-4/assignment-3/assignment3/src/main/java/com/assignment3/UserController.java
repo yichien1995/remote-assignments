@@ -23,7 +23,7 @@ public class UserController {
 
 	@PostMapping("/signup")
 	public String signUp(@RequestParam String email, @RequestParam String password, RedirectAttributes redirectAttributes) {
-		if (storeInformationRepository.findByStoreEmail(email) != null) {
+		if (storeInformationRepository.findByEmail(email) != null) {
 			redirectAttributes.addFlashAttribute("message", "Failed");
 			redirectAttributes.addFlashAttribute("alertClass", "alert-danger");
 		} else {
@@ -37,12 +37,12 @@ public class UserController {
 
 	@PostMapping("/signin")
 	public String signIn(@RequestParam String email, @RequestParam String password, RedirectAttributes redirectAttributes) {
-		StoreInformation checkMember = storeInformationRepository.findByStoreEmail(email);
+		StoreInformation checkMember = storeInformationRepository.findByEmail(email);
 		if (checkMember == null) {
 			redirectAttributes.addFlashAttribute("message", "FindNoMembership");
 			redirectAttributes.addFlashAttribute("alertClass", "alert-findNoMembership");
 			return "redirect:/";
-		} else if (!checkMember.getStorePassword().equals(password)) {
+		} else if (!checkMember.getPassword().equals(password)) {
 			redirectAttributes.addFlashAttribute("message", "WrongPassword");
 			redirectAttributes.addFlashAttribute("alertClass", "alert-wrongPassword");
 			return "redirect:/";
