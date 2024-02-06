@@ -36,7 +36,7 @@ CREATE TABLE `store_information` (
 
 LOCK TABLES `store_information` WRITE;
 /*!40000 ALTER TABLE `store_information` DISABLE KEYS */;
-INSERT INTO `store_information` VALUES (1,'123@gamil.com','123'),(2,'456@gamil.com','456'),(3,'789@gmail.com','789'),(4,'abc@gmail.com','abc'),(5,'def@gmail.com','def'),(6,'ghi@gmail.com','ghi'),(7,'jkl@gmail.com','jkl'),(8,'mno@gmail.com','mno'),(9,'pqr@gmail.com','pqr'),(10,'stu@gmail.com','stu');
+INSERT INTO `store_information` VALUES (1,'123@gamil.com','123'),(2,'456@gamil.com','456'),(3,'789@gmail.com','789'),(4,'abc@gmail.com','abc'),(5,'def@gmail.com','def'),(6,'ghi@gmail.com','ghi'),(7,'jkl@gmail.com','jkl'),(8,'mno@gmail.com','mno'),(9,'pqr@gmail.com','pqt'),(10,'stu@gmail.com','stu');
 /*!40000 ALTER TABLE `store_information` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -71,4 +71,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-02-06 16:53:25
+-- Dump completed on 2024-02-06 17:07:57
